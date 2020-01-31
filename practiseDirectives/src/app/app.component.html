@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-primary" (click)="toggleShowOdd()">
+        Only show odd numbers
+      </button>
+      <br>
+      <br>
+      <ul class="list-group">
+        <div *ngIf = "onlyOdd">
+          <li class="list-group-item" *ngFor="let number of oddNumbers">{{number}}</li>
+        </div>
+        <div *ngIf = "!onlyOdd">
+          <li class="list-group-item" *ngFor= "let number of evenNumbers">{{number}}</li>
+        </div>
+      </ul>
+    </div>
+  </div>
+</div>
+<p appBasicHighlight> this is basic highlight directive...</p>
+<p appBetterHighlight> this is better approch for highlight using directive</p>
+<div [ngSwitch]="value">
+  <p *ngSwitchCase="5">value is 5</p>
+  <p *ngSwitchCase="10">value is 10</p>
+  <p *ngSwitchCase="15">value is 15</p>
+</div>

@@ -1,0 +1,8 @@
+<div class="container">
+  <br>
+  <app-game-control (gameStarted)="startGame($event)"></app-game-control>
+  <hr>
+  <app-odd *ngFor = "let odd of oddNumbers"></app-odd>
+  <hr>
+  <app-even *ngFor = "let even of evenNumbers"></app-even>
+</div>

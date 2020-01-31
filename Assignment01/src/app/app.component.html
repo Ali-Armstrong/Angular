@@ -1,0 +1,7 @@
+<br>
+<br>
+<button class="btn btn-primary" (click)='onClickLogButton()'>Display Details</button>
+<br>
+<label *ngIf='toggle'>hidden content</label>
+<br>
+<p *ngFor = 'let log of logs' [ngStyle]="{color:'white','background-color': log%2==0 ? 'green' : 'blue'}">{{ log }}</p>

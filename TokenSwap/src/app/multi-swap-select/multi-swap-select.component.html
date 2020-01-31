@@ -1,0 +1,44 @@
+<div class="container " style="background-color:white; width: 400px;">
+    <!-- Single button -->
+    <div class="row">
+        <img src="assets/images/Zebi.png" style="width: 450px; height: 250px;">
+    </div>
+    <div class="row" style="background-color: whitesmoke; text-align: center; padding: 20px; 
+    border-radius: 15px; height: 300px; width: 440px;" >
+        <div class="row" style="text-align: left; padding-left: 20px; vertical-align: middle;">
+            <h6> <b>Source Block Chain </b></h6>
+        </div>
+        <div class="row" style="text-align: left; padding-left: 20px;">
+            <div class="dropdown" appDropDown>
+                <button class="btn btn-default dropdown-toggle" style="width: 380px; height: 40px; text-align: left;" type="button" data-toggle="dropdown">
+                    {{fromSelected}}
+                    <span class="pull-right">
+                        <span class="caret"></span>
+                    </span>
+                </button>
+                <ul class="dropdown-menu" role="menu" style="width: 380px;">
+                  <li *ngFor="let val of from"><a (click)="fromValueSelected(val)">{{val}}</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row" style="text-align: left; padding-left: 20px;">
+            <h6> <b>Destination Block Chain </b></h6>
+        </div>
+        <div class="row" style="text-align: left; padding-left: 20px;">
+            <div class="dropdown" appDropDown>
+                <button class="btn btn-default dropdown-toggle" style="width: 380px; height: 40px; text-align: left;" type="button" data-toggle="dropdown">
+                    {{toSelected}}
+                    <span class="pull-right">
+                        <span class="caret"></span>
+                    </span>
+                </button>
+                <ul class="dropdown-menu" role="menu" style="width: 380px;">
+                    <li *ngFor="let val of to_temp"><a (click)="toValueSelected(val)">{{val}}</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row" style="padding: 20px;">
+            <div class="btn btn-primary" style="width: 380px;" (click)="continue()">Continue</div>
+        </div>
+    </div>
+</div>
